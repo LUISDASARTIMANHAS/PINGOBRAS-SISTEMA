@@ -11,16 +11,12 @@ if (!msg.mentions.users.size) {
  msg.channel.send('seu avatar: ${msg.author.displayAvatarURL'({ dynamic: true }));}
   
 const avatarList = msg.mentions.users.map(user => {
- let Embed = new Discord.MessageEmbed() //Criei o embed antes do return
- Embed.setTitle('${user.username}s avatar') 
- Embed.setImage(
-   '${user.displayAvatarURL'({ size: 1024 })
-               )
-  const hex = "#FFFFFF";
- Embed.setColor(hex)
+const Embed = new Discord.MessageEmbed();
+const hex = "#FFFFFF";
+ Embed.setTitle('${user.username}s avatar');
+ Embed.setImage('${user.displayAvatarURL'({ size: 1024 }));
+ Embed.setColor(hex);
+ return msg.channel.send(Embed);});
  
- return msg.channel.send(Embed); //Retornei o embed
-;
- });
- 
-}}
+}
+}
