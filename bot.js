@@ -1,6 +1,7 @@
 const { Client, version } = require('discord.js');
 const {token} = require('./config.json')
 const bot = new Client();
+const date = new Date().getFullYear()
 
 bot.on("ready", async() => {
     console.log(`[ Client ] ${bot.user.tag} esta online agora! `);
@@ -8,11 +9,20 @@ bot.on("ready", async() => {
     bot.user.setPresence({
         status: 'idle',
         activity: {
-            name: "Trabalhando Para Você Crescer! ©️2010-" + new Date().getFullYear(),
+            name: "Trabalhando Para Você Crescer! ©️2010-" + date ,
             type: "PLAYING",
         }
     })
-})
+  console.log('Bot: Hosting ' + `${bot.users.size}` + ' users, in ' + `${bot.channels.size}` + ' channels of ' + `${bot.guilds.size}` + ' guilds.');
+    bot.user.setStatus('online')
+    bot.user.setPresence({
+        game: {
+            name: 'Use f!help',
+            type: "Playing",
+            url: "https://discordapp.com/"
+        }
+    });
+})//Fim do ready
 
 
 bot.login(token)
