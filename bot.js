@@ -15,7 +15,7 @@ bot.on("ready", async() => {
     })
   console.log('Bot: Hosting ' + `${bot.users.size}` + ' users, in ' + `${bot.channels.size}` + ' channels of ' + `${bot.guilds.size}` + ' guilds.');
   const channel = await bot.channels.fetch("1032778034811506738");
-  channel.send("MENSAGEM DO SERVIDOR PINGOBRAS");
+  channel.send("MENSAGEM DO SERVIDOR PINGOBRAS: Novo Usuario Conectado A Pingobras:" + navigator.plataform);
 
     });//Fim do ready
 
