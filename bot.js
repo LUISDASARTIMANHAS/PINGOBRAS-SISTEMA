@@ -3,6 +3,7 @@ const {token} = require('./config.json')
 const bot = new Client();
 const date = new Date().getFullYear()
 
+
 bot.on("ready", async() => {
     console.log(`[ Client ] ${bot.user.tag} esta online agora! `);
     
@@ -15,7 +16,7 @@ bot.on("ready", async() => {
     })
   console.log('Bot: Hosting ' + `${bot.users.size}` + ' users, in ' + `${bot.channels.size}` + ' channels of ' + `${bot.guilds.size}` + ' guilds.');
   const channel = await bot.channels.fetch("1032778034811506738");
-  channel.send("MENSAGEM DO SERVIDOR PINGOBRAS: Novo Usuario Conectado A Pingobras:" + navigator.plataform);
+  channel.send("MENSAGEM DO SERVIDOR PINGOBRAS:" + user);
 
     });//Fim do ready
 
