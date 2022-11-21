@@ -14,15 +14,10 @@ bot.on("ready", async() => {
         }
     })
   console.log('Bot: Hosting ' + `${bot.users.size}` + ' users, in ' + `${bot.channels.size}` + ' channels of ' + `${bot.guilds.size}` + ' guilds.');
-    bot.user.setStatus('online')
-    bot.user.setPresence({
-        game: {
-            name: 'Use f!help',
-            type: "Playing",
-            url: "https://discordapp.com/"
-        }
-    });
-})//Fim do ready
+  const channel = await bot.channels.fetch("1032778034811506738");
+  channel.send("MENSAGEM DO SERVIDOR PINGOBRAS");
+
+    });//Fim do ready
 
 
 bot.login(token)
