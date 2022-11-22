@@ -22,8 +22,8 @@ const botTag = bot.user.tag
   console.log('Bot: Hosting ' + usersCount + ' users, in ' + `${channelsCount}` + ' channels of ' + `${guildsCount.size}` + ' guilds.');
   const channel = await bot.channels.fetch("1032778034811506738");
   channel.send("**🖥️MENSAGEM DO SERVIDOR PINGOBRAS🖥️:**" + novaLinha+ 
-               botTag + " Esta online agora!" + novaLinha+
-               "INICIADO POR: WebSiteHost");
+               "ℹ️"+botTag + " Esta online agora!" + novaLinha+
+               "✅INICIADO POR: WebSiteHost");
 
   
     });//Fim do ready
