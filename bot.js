@@ -2,6 +2,7 @@ const { Client, version } = require('discord.js');
 const {token} = require('./config.json')
 const bot = new Client();
 const date = new Date().getFullYear()
+const novaLinha = "\n"
 
 
 
@@ -20,7 +21,9 @@ const botTag = bot.user.tag
   
   console.log('Bot: Hosting ' + usersCount + ' users, in ' + `${channelsCount}` + ' channels of ' + `${guildsCount.size}` + ' guilds.');
   const channel = await bot.channels.fetch("1032778034811506738");
-  channel.send("**MENSAGEM DO SERVIDOR PINGOBRAS:** "+ botTag + " Esta online agora! Por WebSiteHost");
+  channel.send("**🖥️MENSAGEM DO SERVIDOR PINGOBRAS🖥️:**" + novaLinha+ 
+               botTag + " Esta online agora!" + novaLinha+
+               "INICIADO POR: WebSiteHost");
 
   
     });//Fim do ready
