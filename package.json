@@ -9,7 +9,7 @@
     "node": ">=12.0.0"
   },
   "dependencies": {
-    "discord.js": "^12.5.3",
+    "discord.js": "^14.7.0",
     "discord-api-types": "^0.37.25",
     "detective-cjs": "^4.0.0",
     "@discordjs/opus": "^0.9.0",
@@ -22,6 +22,6 @@
     "ts-node": "^10.9.1"
   },
   "scripts": {
-    "start": "node bot.js"
+    "start": " bot-login.js"
   }
 }
