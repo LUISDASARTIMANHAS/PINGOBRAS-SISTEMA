@@ -22,7 +22,6 @@
     "ts-node": "^10.9.1"
   },
   "scripts": {
-    "start": "index.html",
-    "start": "node bot.js"
+    "start": "node index.hbs"
   }
 }
