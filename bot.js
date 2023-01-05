@@ -1,31 +1,43 @@
-const { Client, version } = require('discord.js');
-const {token} = require('./config.json')
+const { Client, version } = require("discord.js");
+const { token } = require("./config.json");
 const bot = new Client();
-const date = new Date().getFullYear()
-const novaLinha = "\n"
+const date = new Date().getFullYear();
+const novaLinha = "\n";
 
+bot.on("ready", async () => {
+  const usersCount = bot.users.size;
+  const channelsCount = bot.channels;
+  const guildsCount = bot.guilds;
+  const botTag = bot.user.tag;
 
-
-bot.on("ready", async() => {
-const usersCount = bot.users.size
-const channelsCount = bot.channels
-const guildsCount = bot.guilds;
-const botTag = bot.user.tag
-  
   console.log(`[ Client ] ${botTag} esta online agora! `);
-    bot.user.setPresence({
-        status: 'idle',activity: {
-            name: "Trabalhando Para Você Crescer! ©️2010-" + date ,
-            type: "PLAYING",}
-    })// bot presença
-  
-  console.log('Bot: Hosting ' + usersCount + ' users, in ' + `${channelsCount}` + ' channels of ' + `${guildsCount.size}` + ' guilds.');
+  bot.user.setPresence({
+    status: "idle",
+    activity: {
+      name: "Trabalhando Para Você Crescer! ©️2010-" + date,
+      type: "PLAYING",
+    },
+  }); // bot presença
+
+  console.log(
+    "Bot: Hosting " +
+      usersCount +
+      " users, in " +
+      `${channelsCount}` +
+      " channels of " +
+      `${guildsCount.size}` +
+      " guilds."
+  );
   const channel = await bot.channels.fetch("1032778034811506738");
-  channel.send("**🖥️MENSAGEM DO SERVIDOR PINGOBRAS🖥️:**" + novaLinha+ 
-               "ℹ️"+botTag + " Esta online agora!" + novaLinha+
-               "✅INICIADO POR: WebSiteHost");
+  channel.send(
+    "**🖥️MENSAGEM DO SERVIDOR PINGOBRAS🖥️:**" +
+      novaLinha +
+      "ℹ️" +
+      botTag +
+      " Esta online agora!" +
+      novaLinha +
+      "✅INICIADO POR: WebSiteHost"
+  );
+}); //Fim do ready
 
-  
-    });//Fim do ready
-
-bot.login(token)
+bot.login(token);
